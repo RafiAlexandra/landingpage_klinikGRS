@@ -92,7 +92,7 @@ section:nth-child(even){
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: #90EE90;
 }
 
 .header .logo{
