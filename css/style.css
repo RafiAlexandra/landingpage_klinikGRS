@@ -20,85 +20,6 @@
     text-decoration: none;
 }
 
-/*css for manual slide navigation*/
-
-.navigation-manual{
-    position: absolute;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn{
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background: #40D3DC;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-
-/*css for automatic navigation*/
-
-.navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 800px;
-    justify-content: center;
-    margin-top: 460px;
-}
-
-.navigation-auto div{
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #40D3DC;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #40D3DC;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #40D3DC;
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #40D3DC;
-}
-
 image{
     position: relative;
     max-width: 48rem;
@@ -147,7 +68,7 @@ section{
     color: var(--green);
     cursor: pointer;
     font-size: 1.7rem;
-    background: #fff;
+    background: #ffffff;
 }
 
 .btn span{
@@ -178,7 +99,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #90EE90;
+    background: #81d481;
 }
 
 .header .logo{
@@ -197,12 +118,12 @@ section{
 
 .header .navbar a{
     font-size: 1.7rem;
-    color: var(--light-color);
+    color: #000000;
     margin-left: 2rem;
 }
 
 .header .navbar a:hover{
-    color: var(--green);
+    color: #f6ff00;
 }
 
 #menu-btn{
@@ -226,6 +147,33 @@ section{
     padding: 200px;
     padding-top: 266px;
     height: 620px;
+}
+
+
+a:hover{
+    color: #fffff3;
+    padding: 1px 1px;
+    display: inline-block;
+    position: relative;
+}
+
+a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #f6ff00;
+    transition: width  0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    
+}
+
+a:hover:after{
+    width: 100%;
+    left: 0;
 }
 
 .home .image{
@@ -296,6 +244,7 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     gap: 2rem;
+    padding: 7rem;
 }
 
 .services .box-container .box{
@@ -644,25 +593,6 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media queries */
 @media (max-width:991px){
 
@@ -675,7 +605,7 @@ section{
     }
     
     section{
-        padding: 2rem               ;
+        padding: 2rem;
     }
 
     .home {
@@ -720,4 +650,5 @@ section{
     html{
         font-size: 50%;
     }
+    
 }
